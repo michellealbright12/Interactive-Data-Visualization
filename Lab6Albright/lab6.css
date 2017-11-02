@@ -1,0 +1,25 @@
+/* Lab 6 CSS file, 
+   [Michelle Albright]
+   */
+
+body{
+  background:white; 
+  color:#006
+}
+circle {
+  transition: all 0.3s;
+}
+
+circle#circle0:hover {
+  fill: orange;
+}
+
+circle#circle1:hover {
+  fill: red;
+}
+
+circle#circle2:hover {
+  fill: purple;
+}
+
+

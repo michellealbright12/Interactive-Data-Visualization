@@ -1,0 +1,29 @@
+  // draw the labels
+  svg.selectAll("text")
+    .data(dataset)
+    .enter()
+    .append("text")
+    .text(function(d) {
+      return d.County;
+    })
+//    .attr("text-anchor", "middle")
+    .attr("x", function(d, i) {
+      console.log("x is ", + xScale(i) + xScale.bandwidth() / 2);
+      return xScale(i) + xScale.bandwidth() / 2;
+    })
+    .attr("y", function (d) {
+//      console.log("y is ", + Height 
+//		  - yScale(parseInt(d.Count_Poverty)) + labelYoffset);
+//      return Height - yScale(parseInt(d.Count_Poverty)) + labelYoffset;
+      return Height;
+    })
+//    .attr("z-index", 10)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "11px")
+    .attr("fill", "red")
+    .attr("text-anchor", "middle")
+    .attr("transform", function (d, i) {
+//	  return "translate(-20,-10), rotate(-20, -20, -10)";
+      return "rotate(-50, " + -50*i + "," +  -60*i + ")";
+    })
+;
