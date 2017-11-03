@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Project1 HTML file
+Authors: Michelle
+Due Date: 10/6/2017
+-->
+<head>
+<meta charset="utf-8">
+<title>Lab 4</title>
+
+<!-- D3 from Murray-->
+<script type="text/javascript" src="d3.js"></script>
+
+<!-- the css is in an external file -->
+<link type="text/css" href="project1.css">
+
+</head>
+
+<body>
+  <div id="tooltip" class="hidden">
+    <p><strong id="titleSect">Population Size</strong></p>
+    <p><span id="value"></p>
+  </div>
+    <div id="barChart">
+        <p> Part 1: Horizontal Bar Chart
+            <button type="button" id="a"> Sort Ascending </button>
+            <button type="button" id="d"> Sort Descending </button>
+        </p>
+    </div>
+    <div id="scatterPlot">
+        <!-- set up menu items; id for controls is used in CSS -->
+        <div id="controls">
+          <br>
+          <small>Pick attributes to display on the X and Y axis:</small>
+          <p>X Axis:<br>
+    	<select id="xSelect">
+    	  <optgroup label="Attributes" id="xmetrics"></optgroup></select></p>
+          <p>Y Axis:<br>
+    	<select id="ySelect">
+    	  <optgroup label="Attributes" id="ymetrics"></optgroup></select></p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="project1.js"></script>
+</body>
+</html>
