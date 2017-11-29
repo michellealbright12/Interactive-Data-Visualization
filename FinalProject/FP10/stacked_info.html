@@ -1,0 +1,81 @@
+<!-- Final Project assignment 6 - Shallow Prototypes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CSCI 3665: Final Project FP10</title>
+        <link rel="stylesheet" type="text/css" href="../MichelleBoFP.css">
+</head>
+
+<body>
+  <h1>Stacked bar chart info - Michelle and Bo</h1>
+  <h4>Project: Lake Data</h4>
+  <h4>Collaborator: Erik Nelson</h4>
+
+  <div class=thinspace></div>
+  <div class=thinline></div>
+  <br>
+  <b>Questions to answer</b><br>
+  This visualization will answer the question: which states see the most lake
+  visits, and how are those visits broken up in each state. This will be
+  accomplished by making a bar for each state, and then stacking data on those
+  bars. Each stack of the data will be a "bucket" within the range of the total
+  photo user days (PUD) for our dataset. So for example, if in Vermont the range
+  of PUDs for the
+  lakes is 10-500, we would break up the stacks on the bar from 10-100, 100-200,
+  etc... and then make the size of each bar connected to the total count for
+  each bucket on the range. The size of the bar would then be equal to the total
+  number of PUDs in that state
+
+
+  <br><br>
+  <b>Interaction</b><br>
+  Most states will see that they get many visits in the low 10s-20s over the
+  ten years of photo data that we have (our access to the data is already
+  in aggregate form unfortunately). But, it will be clear that some states have
+  lakes that are visited hundred if not thousands of times over 10 years, and
+  hopefully this visualization will provide a clear cut way to see how those
+  visitations are distributed across the states, and then how they're distributed
+  within each state. The interaction here will provide the user insight into
+  each state. As the user hovers of a certain stack on a bar, a map of that
+  state will appear on the side of the bar chart. This map will plot each lake
+  on it, and the lakes that fall into the "hovered" stack of the bar will be
+  highlighted against the rest. The radius of each data point will be scaled
+  based on the total PUD of that lake.
+  <br>
+  We have a decently detailed sketch of this that is hand-drawn, and Professor
+  Congdon currently has in her possesion.
+  <br>
+  For reference:
+  <ul>
+    <li>
+      <a href="https://bl.ocks.org/mbostock/3886208">This</a> is our main
+      inspiration for the bar chart.
+    </li>
+    <li>
+      <a href="http://bl.ocks.org/mstanaland/6100713">This</a> visualization
+      gives a good idea of how we can implement a stacked bar chart, and then
+      add a hover tooltip. In our case, however, the tooltip will not follow the
+      mouse; it will be on the side.
+    </li>
+    <li>
+      <a href="https://bl.ocks.org/mbostock/5562380">This</a> visualization
+      shows how we can plot a single state. This will be used for the hover
+      info.
+    </li>
+  </ul>
+  <br><br>
+  <b>Implementation path</b><br>
+  As with all of our visualizations, we will need to clean the data and reduce
+  it down to what we need for this specific project first.
+  Then, we need to get the bar chart up and running. This might involve some
+  data aggregation, as well as some thought as to how to deal with missing data,
+  if there is any. That said, it should be pretty straight forward. Once we
+  figure out the data aggregation techniques required, the bar chart itself
+  shouldn't take too long. It will then fall on us to create the hover state
+  SVG visualization, which might take a while to figure out.
+
+  <br><br>
+  <a href="goals.html">Go back to goals</a>
+
+</body>

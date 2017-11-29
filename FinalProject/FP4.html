@@ -1,0 +1,66 @@
+<!-- Michelle & Bo -->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>CSCI 3665: Final Project FP10</title>
+            <link rel="stylesheet" type="text/css" href="MichelleBoFP.css">
+        <h1>Lakes Dataset Project: Erik Nelson</h1>
+        <h4>Michelle & Bo</h4>
+        <h4>November 20, 2017</h4>
+        <h4>Assignment FP4</h4>
+    </head>
+      <div class=thinspace></div>
+        <div class=thinline></div>
+    <body>
+
+    <p>
+    <b>Background Info:</b>
+    <br>
+   	This dataset contains information about lakes in the Eastern half of
+   	the United States. This includes attributes like the lake's ID, latitude,
+   	longitude, county and state, and information about the lake's quality
+   	such as the chemical makeup of the lake, its depth & area, and the Secchi
+   	depth. The Secchi depth is correlated to how eutrophic a lake is, which
+   	is a measure of the lake's quality. Each lake also has information on the "photo user days", which is the number of days a picture was uploaded
+   	online of that lake, which is correlated to the number of visitors to that
+   	lake. The goal of the dataset is to see if there is a correlation
+   	between the health of a lake & the number of photo user days, and how
+   	that changes among different regions in the US.
+    </p>
+
+    <p>
+    <b>Project Overview:</b>
+    <br>
+    The goal of this project is to create an interactive visualization of
+    lakes in the US to show how attributes of a lake affect the number
+    of visitors to that lake. We have predicted that healthier lakes will have
+    more visitors, so we would expect to see a correlation between Secchi
+    depth/chemical readings and the number of photo user days. We would also
+    expect this to differ between New England and the Cornbelt, as lakes in
+    the Cornbelt region are generally more eutrophic. The choropleth visualization
+    will allow the user to explore the relationships between location,
+    chemical makeup of the lake, and the number of visitors. The scatter
+    plot will explore how photo user days of lakes have changed over time
+    in response to changes in chemicals, nearby populations, and industrialization.
+    </p>
+
+    <p>
+    <b>Data Manipulations:</b>
+    <br>
+    Because the dataset is so large, and many entries have missing data.
+    This could cause issues when reading in the data, and would also
+    significantly increase the lag of the website. To combat this, we
+    will write several python scripts to filter out entries with missing
+    data that is needed for each visualization. This will result in 3-4
+    smaller subsets of the original data, which is what our code will
+    be working from.
+    <br><br>
+    Also, because the number of datapoints is so large, we will often
+    only use a random subset of the data. This will avoid the problem
+    of there being so many datapoints that they cannot be distinguished.
+    For example, our animated scatterplot will contain the 10 lakes with
+    the most available datapoints, as per the suggestion of our collaborator.
+    </p>
+
+    </body>
+</html>

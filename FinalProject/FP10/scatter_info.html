@@ -1,0 +1,69 @@
+<!-- Final Project assignment 6 - Shallow Prototypes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CSCI 3665: Final Project FP10</title>
+        <link rel="stylesheet" type="text/css" href="../MichelleBoFP.css">
+</head>
+
+<body>
+  <h1>Scatter plots info - Michelle and Bo</h1>
+  <h4>Project: Lake Data</h4>
+  <h4>Collaborator: Erik Nelson</h4>
+
+  <div class=thinspace></div>
+  <div class=thinline></div>
+  <br>
+  <b>Questions to answer</b><br>
+  The Scatter plots are intended to answer the question: how does the chemical
+  make-up of the lakes relate to lake popularity? Realtedly, how are other
+  attributes of our dataset interacting with each other?
+  <br>
+  This visualization will compromise one main scatter plot, and two or three
+  supplemental scatter plots. The main plot will use the raw data on readings of
+  the chemical data from each lake. It will scatter data based on two of those
+  parameters, and then animate that data over time. The size of each data point
+  will be the popularity of the data, coming from the photo user day data in our
+  main dataset. The supplemental scatter plots will explore data from the
+  original dataset, looking at how popularity is affected by clarity,
+  development in the surrounding area, and other factors yet to be determined.
+
+  <br><br>
+  <b>Interaction</b><br>
+  The main scatter plot will allow the user to animate it over time. All of the
+  plots will allow the user to hover over the data point and see information
+  about the given lake.
+  <br>
+  We have a decently detailed sketch of this that is hand-drawn, and Professor
+  Congdon currently has in her possesion.
+  <br>
+  For reference:
+  <ul>
+    <li>
+      <a href="https://bost.ocks.org/mike/nations/">This</a> scatter plot viz
+      is out main inspiration for the main scatter plot.
+    </li>
+    <li>
+      <a href="https://bl.ocks.org/mbostock/3887118">This</a> scatter plot viz
+      will inspire the rest of our plots.
+    </li>
+  </ul>
+  <br><br>
+  <b>Implementation path</b><br>
+  The path to finishing this includes first completing the main scatter plot.
+  The supplemental plots are minor compared to this one. This will involve
+  using two dataset in tandem. To accomplish this, we will have to deal with
+  uneven distributed samplings of the lakes. We may end up taking lakes that
+  were sampled at least a hundered times, and then all those that were sampled
+  more, we will just use 100 of the samplings. Once we figure out how to
+  appropriately use the data, we will move on to animating the data over time.
+  Finally we will make the other scatter plots. These will follow the same hover
+  action as the first, and will not use any interaction so it should be fairly
+  simple.
+
+  <br><br>
+  <a href="goals.html">Go back to goals</a>
+
+
+</body>

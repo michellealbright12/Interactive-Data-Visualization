@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<!-- Michelle & Bo -->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>CSCI 3665: Final Project FP6</title>
+            <link rel="stylesheet" type="text/css" href="../MichelleBoFP.css">
+        <!-- D3 from Murray-->
+        <script type="text/javascript" src="//d3js.org/d3.v4.min.js"></script>
+        <link rel="stylesheet" type="text/css"
+            href="MichelleBoFP.css">
+
+    </head>
+    <body>
+        <h1>FP9: Notes From Pilot Studies - Michelle and Bo</h1>
+        <h2>Project: Lake Data</h2>
+        <h4>Due: November 15, 2017</h4>
+        <h4>Collaborator: Erik Nelson</h4>
+        <div class=thinspace></div>
+      <div class=thinline></div>
+
+        <p>
+       <b> Questions for the bar chart:</b><br>
+            - How does the area surrounding lakes differ in different states?<br>
+            - How does the average chemical makeup differ between lakes in different states?<br>
+            - What about lakes within the same state? Within the same county?<br>
+            - Are lakes in some states more rural than others?<br>
+            <br>
+        <b>Stacked bar chart</b><br>
+            - add interactivity; maybe new visualization when you click on a certain bar?<br>
+                -or ability to click on one subset of the stack to compare<br>
+            - think about alternative ways to categorize the data other than by state<br>
+            - change attributes that we're looking at -- we used the ones that we did in
+            this example so to avoid dealing with missing values. in the future we will
+            make the bar chart look at a more interesting part of the data<br>
+        <br>
+        <b>Grouped Bar Chart</b><br>
+            - hard to read because a couple of the bars are so much larger than others<br>
+            - the grouping by state makes it difficult to compare across states<br>
+            - the attributes in the bar chart don't connect with the questions being
+            asked (will work with different data for the actual project)<br>
+<br>
+        <b>Questions for the scatter plot:</b><br>
+            - Does a lake's size or depth affect its chemical composition?<br>
+            - How does a lake's size affect its visitation?<br>
+            - Do lakes in different states show different trends?<br>
+            - Does the chemical composition of a lake affect the number
+                of photos taken?<br>
+                <br>
+        <b>Scatter Plot</b><br>
+            - add interactivity to change the axes as well<br>
+            - maybe add some sort of hover over the circles to show more information?<br>
+            - the scatterplot is good at conveying the relationships between a lot of
+                different data, which is good for our data<br>
+
+            <br>
+        <b>Questions for the Histogram:</b><br>
+            - Is there a trend related to the chemical composition of lakes in certain
+            areas?<br>
+            - How do photo user days compare across all lakes?<br>
+            <br>
+        <b>Histogram:</b><br>
+            - Doesn't convey information efficiently<br>
+            - Doesn't convey a lot of information<br>
+            - Not very visually engaging<br>
+            - With so many attributes in our dataset, it seems like this ignores or doesn't
+            take advantage of most of the attributes
+        </p>
+
+        <p>Based on this feedback, we'd like to pursue the stacked bar chart, the
+        scatter plot, and the choropleth (not included for this exercise). While the histogram
+        is a cool variation of the bar chart, it leaves too much information out, and the
+        scatterpot is much better at incorporating all the information needed to address
+        our questions. The feedback also clearly showed us that the stacked bar chart was
+        more effective and pleasing to the eye than the grouped bar chart. The scatter
+        plot could have a lot of different interactive elements, so it's important
+        that we monitor that so it doesn't get too confusing.</p>
+
+    </body>
+</html>

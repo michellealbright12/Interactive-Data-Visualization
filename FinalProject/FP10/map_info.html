@@ -1,0 +1,83 @@
+<!-- Final Project assignment 6 - Shallow Prototypes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CSCI 3665: Final Project FP10</title>
+        <link rel="stylesheet" type="text/css" href="../MichelleBoFP.css">
+</head>
+
+<body>
+  <h1>Choropleth map info - Michelle and Bo</h1>
+  <h4>Project: Lake Data</h4>
+  <h4>Collaborator: Erik Nelson</h4>
+
+  <div class=thinspace></div>
+  <div class=thinline></div>
+  <br>
+  <b>Questions to answer</b><br>
+  This Choropleth map will answer the question: how does the surrounding area
+  and chemical make up of a lake affect its popularity and how do those
+  variables change across regions? The map will take on a couple different froms
+  depending on how the user is viewing the map. When the map is completely
+  zoomed out, the user will see a point for each lake in the dataset, with the
+  radius for that point uniform across all the lakes. The user can hover over a
+  state, and on the side of the visualization there will be a donut chart that
+  shows the average chemical make-up of the lakes in that state. As the user
+  hovers over states, the state itself will highlight, and when the user clicks
+  on a state, it will zoom in on that state. This activates the second way of
+  viewing the map. When a state is zoomed in on, the radius of the circles
+  adjusts so that it now correspond to the photo user days (PUD) of the given
+  lake. Now when a lake is hovered over, the donut chart will show the chemical
+  make-up of that specific lake, and if there is missing data it will note that
+  there isn't enough data on that lake to display. The color of each point will
+  correspond to a selected parameter, displaying on a color-scale the value of
+  that parameter. These parameter options will be the parameters in the dataset
+  that describe the surrounding area around each lake.
+
+  <br><br>
+  <b>Interaction</b><br>
+  As described above, there are three possible interactions with this
+  visualization: hovering, zooming, and changing a parameter. Because the
+  interactions are important to how the visualization is viewed and answers
+  questions about the dataset, they
+  are described above. The most important one is probably zooming. This will
+  allow the user more ability to explore the data in depth. It will take some
+  textual description to make sure that it is clear how this works, but
+  hopefully we can make it intuitive.
+  <br>
+  We have a decently detailed sketch of this that is hand-drawn, and Professor
+  Congdon currently has in her possesion.
+  <br>
+  For reference:
+  <ul>
+    <li>
+      <a href="https://bl.ocks.org/mbostock/2206590">This</a> shows a good
+      example of zooming in on a state. We will use this with a subset of the
+      US data, using only the states that we need.
+    </li>
+    <li>
+      <a href="https://bl.ocks.org/mbostock/3887193">This</a> visualization is
+      a good example of a donut chart.
+    </li>
+  </ul>
+  <br><br>
+  <b>Implementation path</b><br>
+  The path to implementing this requires first implementing the static map.
+  We need GEOJson data on the states in question, then we need to get the
+  projection right so that only those states are visible. After that we need to
+  read in the csv file and add the data to the map.
+  Next, we will need to implement the zooming. This will not allow the user to
+  brush around the map, so the first example in the reference section is good.
+  As the user zooms, the bubbles for each lake will need to change so that has
+  to be implemented in tandem with the zooming. Finally we need to add the donut
+  chart on the side. We expect that this will take some time, given that it is
+  doing a different thing based on the user's position in the map. That will be
+  our reach goal, and if we can't get that done that's ok.
+
+  <br><br>
+  <a href="goals.html">Go back to goals</a>
+
+
+
+</body>

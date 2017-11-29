@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<!-- Michelle & Bo -->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>CSCI 3665: Final Project Choropleth Map</title>
+        <!-- D3 from Murray-->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/topojson.v2.min.js"></script>
+        <script src="https://d3js.org/d3-color.v1.min.js"></script>
+        <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/queue.v1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="MichelleBoFP.css">
+        <link rel="stylesheet" type="text/css" href="map.css">
+
+    </head>
+    <body>
+        <h1>Final Project Choropleth Map - Michelle & Bo</h1>
+        <h4>Project: Lake Data</h4>
+        <h4>Collaborator: Erik Nelson</h4>
+        <div class=thinspace></div>
+        <div class=thinline></div>
+
+        <div id="tooltip" class="hidden">
+          <p><strong id="lakename"></strong></p>
+          <p><span id="state"></p>
+        </div>
+
+        <svg id="map"></svg>
+        <svg id="donut" width="150" height="150"></svg>
+        <script type="text/javascript" src="map.js"></script>
+    </body>
+</html>

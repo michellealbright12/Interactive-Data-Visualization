@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>CSCI 3665: FP3/8 Describe your Data</title>
+            <link rel="stylesheet" type="text/css" href="../MichelleBoFP.css">
+            <style media="screen">
+            table, th, td {
+              border: 1px solid black;
+            }
+            </style>
+    </head>
+
+    <body>
+        <h1>FP3/FP8 - Michelle and Bo</h1>
+        <h4>Project: Lake Data</h4>
+        <h4>Due: November 6, 2017</h4>
+        <h4>Collaborator: Erik Nelson</h4>
+        <div class=thinspace></div>
+        <div class=thinline></div>
+        <h3>Summary</h3>
+        Our data has 184 attributes (or columns), they are a mix of numeric
+        and categorical values. Most of them are descbribing the land around
+        the lake. We also have a csv file containing the raw data for the
+        chemical readings of each lake, over all the years possible. These
+        data correspond to the lakeID in the original data set, so we can
+        connect the two.
+        We are going to focus on a few things: the geographic location of the
+        lake, the depth and area of the lake, the state that the lake is in,
+        the data on the surrounding area (more on this in a second), and the
+        chemical make-up of the lake.
+        <br>
+        The data on the surrounding area is given by the column headings
+        begining with <code>nlcd</code>. These data points give the percentage
+        of the land surrounding the lake in question that is categorized in a
+        certain category. The table below describes the columns:
+        <table style="width:60%">
+          <tr>
+          <td> nlcd2011_Pct_11</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, open water</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_21</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Developed, Open Space</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_22</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Developed, Low Intensity</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_23</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Developed, Medium Intensity</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_24</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Developed, High Intensity</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_31</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD,  Barren (Rock/Sand/Clay)</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_41</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Deciduous Forest</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_42</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Evergreen Forest</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_43</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Mixed Forest</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_52</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Scrub/Shrub</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_71</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Grassland/Herbaceous</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_81</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Pasture/Hay</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_82</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Cultivated Crops</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_90</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD, Woody Wetlands</td>
+          </tr>
+          <tr>
+          <td> nlcd2011_Pct_95</td>
+          <td>Percent of land use/cover in the zone from the 2011 NLCD,  Emergent Herbaceous Wetland</td>
+          </tr>
+        </table>
+        As you can see, we are focusing on the 2011 data, but we can also
+        visualize this same data from 2001, or 2006.
+        <br>
+        We will also be using the raw data that gives each reading about the
+        chemical make-up of each lake. Some lakes have very few samples, and
+        others have thousands. We will determine in the future what works best
+        for us, but for now we plan to only use lakes that have over 100
+        samples. The chemicals that we have data on are:
+        <ul>
+          <li>chla</li>
+          <li>colora	</li>
+          <li>colort	</li>
+          <li>dkn	</li>
+          <li>doc	</li>
+          <li>nh4	</li>
+          <li>no2	</li>
+          <li>no2no3	</li>
+          <li>srp	</li>
+          <li>tdn	</li>
+          <li>tdp	</li>
+          <li>tkn	</li>
+          <li>tn	</li>
+          <li>toc	</li>
+          <li>ton	</li>
+          <li>tp</li>
+        </ul>
+        <br>
+        Columns we will be using:
+        <ul>
+          <li>nhd_lat	-> latitude of lake</li>
+          <li>nhd_long	-> longitude of lake</li>
+          <li>lake_area_ha	-> area of the lake in ha</li>
+          <li>lagosname1	-> name of the lake</li>
+          <li>meandepth	-> mean depth of the lake</li>
+          <li>maxdepth -> maximum depth of the lake</li>
+          <li>lagoslakeid -> lakeID connected to the lagos data set</li>
+          <li>summerpud	-> photo user days for the summer months. this data is
+          proven to correlate to visitations to the lake. (total from 2001 to
+          2011)</li>
+          <li>totalpud -> similar to summerpud, but for the whole time period
+          (2001-2011)</li>
+          <li>county_name	-> county of the lake</li>
+          <li>state_name -> state that the lake is in</li>
+          <li>nlcd2011_Pct_11 -> see above</li>
+          <li>nlcd2011_Pct_21 -> see above</li>
+          <li>nlcd2011_Pct_22 -> see above</li>
+          <li>nlcd2011_Pct_23 -> see above</li>
+          <li>nlcd2011_Pct_24 -> see above</li>
+          <li>nlcd2011_Pct_31 -> see above</li>
+          <li>nlcd2011_Pct_41 -> see above</li>
+          <li>nlcd2011_Pct_42 -> see above</li>
+          <li>nlcd2011_Pct_43 -> see above</li>
+          <li>nlcd2011_Pct_52 -> see above</li>
+          <li>nlcd2011_Pct_71 -> see above</li>
+          <li>nlcd2011_Pct_81 -> see above</li>
+          <li>nlcd2011_Pct_82 -> see above</li>
+          <li>nlcd2011_Pct_90 -> see above</li>
+          <li>nlcd2011_Pct_95 -> see above</li>
+          <li>avgsecchi	-> average secchi depth. this is a measurement of
+            clarity in the water</li>
+          <li>eutrophic -> boolean value: if secchi is below 1.8 the lake is
+            categorized as "eutrophic"</li>
+        </ul>
+        As well as the columns from the raw data that have the information on
+        the chemical data.
+        <br>
+        Example:
+  <pre>
+  lagoslakeid	summerpud	totalpud	nhd_lat	nhd_long	lake_area_ha	lagosname1	meandepth	maxdepth county_name	state_name ...
+  1	7	28	42.547393	-73.174249	114.9470119	CHESHIRE RESERVOIR	NA	2.7 Berkshire County	Massachusetts ...
+  2	1	1	42.184089	-73.047277	24.86589924	BENTON POND	NA	6.1 Berkshire County	Massachusetts ...
+  3	1	10	42.530813	-73.19155	75.41099948	CHESHIRE RESERVOIR	NA	1.8 Berkshire County	Massachusetts ...
+  .
+  .
+  .
+  </pre>
+        <br>
+    </body>
+</html>
